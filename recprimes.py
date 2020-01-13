@@ -1,4 +1,5 @@
 from primes import prime as p
+from termcolor import colored as cl
 
 def recprime(n, h=0):
 	""" Return the consecutive primes of a number """
@@ -15,8 +16,7 @@ while record < 10:
 	aux = recprime(index)
 	if aux > maxi:
 		maxi = aux
-		print(index, ":", maxi)
+		print(index, ":", maxi, cl("Record", "green"))
 		record += 1
 	index += 1
 
-print(index, ":", maxi)
