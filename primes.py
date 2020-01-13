@@ -15,12 +15,3 @@ def prime(n):
 		if n % i == 0:
 			return False
 	return True
-
-"""
-#=====Test=====
-t0 = t.time()
-for n in range(1,100001):
-	ifPrime(n)
-t1 = t.time()
-print("Time function: ", t1 - t0)
-"""
