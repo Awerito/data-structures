@@ -1,22 +1,8 @@
+from primes import prime as p
 import time as t
 import math as m
 
 array = []
-
-def prime(n):
-	""" Return True if a number n is prime, "False" otherwise. """
-	if n==1:
-		return False
-	if n==2:
-		return True
-	if n>2 and n%2==0:
-		return False
-
-	max_div = m.floor(m.sqrt(n) + 1)
-	for i in range(3, max_div, 2):
-		if n % i == 0:
-			return False
-	return True
 
 def recprime(n):
 	""" Count the primes recurrences in the index of the primes values """
@@ -29,7 +15,7 @@ t0 = t.time()
 maxi, i, value = 0, 0, 0
 while(value < 10):
 	i += 1
-	if prime(i):
+	if p(i):
 		array.append(i)
 		aux = recprime(i) 
 		if aux > value:
