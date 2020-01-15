@@ -1,22 +1,16 @@
 from primes import prime as p
-import time as t
+#import time as t
 
 def perf(n):
+	""" Return "True" if the number n is a perfect number, "False" otherwise """
 	if n == 1 or p(n):
 		return False
 	sum = 1
 	for i in range(2, n):
 		if n % i == 0:
 			sum += i
+			if n < sum:
+				return False
 	if sum == n:
 		return True
 	return False
-
-i, count = 1, 0
-t0 = t.time()
-while count < 4:
-	if perf(i):
-		count += 1
-	i += 1
-t1 = t.time()
-print(t1 - t0)
