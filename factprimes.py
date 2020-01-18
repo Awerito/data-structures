@@ -2,6 +2,7 @@ from primes import prime as pr
 
 cache = {0:2, 1:3}
 def fact(n, a = []):
+	""" Return an array with all the prime factors of n """
 	if n == 1:
 		return a
 	for i in cache:
