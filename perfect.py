@@ -1,5 +1,4 @@
 from primes import prime as p
-#import time as t
 
 def perf(n):
 	""" Return "True" if the number n is a perfect number, "False" otherwise """
