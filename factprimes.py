@@ -8,13 +8,11 @@ def fact(n, a = []):
 		if n == cache[i]:
 			a.append(n)
 			return fact(1, a)
-	print("buscando primos")
 	aux = cache[len(cache) - 1]
 	if n > aux:
 		for i in range(aux + 2, n + 1, 2):
 			if pr(i):
 				cache[len(cache)] = i
-	print("fin busqueda primos")
 	for p in cache:
 		if n % cache[p] == 0:
 			a.append(cache[p])
