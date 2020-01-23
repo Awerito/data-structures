@@ -1,6 +1,3 @@
-import matplotlib.pyplot as plt
-from time import time
-
 def fact(n, a):
 	while n % 2 == 0:
 		a.append(2)
@@ -13,12 +10,3 @@ def fact(n, a):
 		a.append(int(n))
 	return a
 
-p = []
-for i in range(1, 100001):
-	t0 = time()
-	fact(i, [])
-	t1 = time()
-	p.append(t1 - t0)
-
-plt.plot(p)
-plt.show()
