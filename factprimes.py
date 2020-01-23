@@ -1,4 +1,4 @@
-from primes import prime as pr
+from sequences.primes import prime as pr
 
 cache = {0:2, 1:3}
 def fact(n, a = []):
