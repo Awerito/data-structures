@@ -1,5 +1,4 @@
 from sequences.primes import prime as p
-
 def perf(n):
 	""" Return "True" if the number n is a perfect number, "False" otherwise """
 	if n == 1 or p(n):
