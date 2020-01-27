@@ -1,5 +1,7 @@
-def fact(n, a):
-    """ Return an array with the prime factors of n """
+def _fact(n, a):
+    """Create and return the array of prime factors"""
+    if n == 1:
+        return [1]
     while n % 2 == 0:
         a.append(2)
         n = int(n / 2)
@@ -11,6 +13,10 @@ def fact(n, a):
         a.append(int(n))
     return a
 
+def fact(n):
+    """ Return the array of prime factors of n """
+    return _fact(n, [])
+
 if __name__=="__main__":
-    for i in range(2, 101):
-        print(fact(i, []))
+    for i in range(1, 101):
+        print(fact(i))
