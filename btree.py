@@ -1,28 +1,28 @@
 class btree:
-	""" Binary Tree class """
-	def __init__(self, data = None):
-		''' Initialize a tree with a root and two childs nulls'''
+	""" Binary Tree class for float numbers """
+	def __init__(self, data = None, left = None, right = None):
+		""" Initialize a tree with a root and two childs nulls """
 		self.data = data
-		self.left = None
-		self.right = None
+		self.left = left
+		self.right = right
 
-	def sort(self, array):
-		''' Gets an empty array and return the array with the element of the tree sorted '''
+	def preorder(self, array):
+		""" Gets an empty array and return the array with the element of the tree sorted """
 		if self.data:
 			if self.left:
-				self.left.sort(array)
+				self.left.preorder(array)
 			else:
 				return array.append(self.data)
 
 			if self.right:
-				self.right.sort(array)
+				self.right.preorder(array)
 		else:
 			return array
 
 	def insert(self, data):
-		''' Insert element in the tree, based on the inorder insertion'''
+		""" Insert data in the tree, greater than root to right, left otherwise. Repeated values are ignored """
 		if self.data:
-			if data <= self.data:
+			if data < self.data:
 				if self.left:
 					self.left.insert(data)
 				else:
