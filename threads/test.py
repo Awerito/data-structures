@@ -15,11 +15,10 @@ if __name__ == "__main__":
     t1 = t()
     print("Single-thread", t1 - t0)
     print("=============================")
-    """
+
     t0 = t()
     with cf.ThreadPoolExecutor(max_workers=threads) as executor:
         executor.map(test, range(1, total + 1))
     t1 = t()
     print("Multi-thread", t1 - t0)
     print("=============================")
-    """
