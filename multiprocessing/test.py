@@ -3,7 +3,7 @@ from primes import prime
 from time import time as t
 
 if __name__=="__main__":
-    total = 100000
+    total = 10000000
     threads = 4
     
     t0 = t()
